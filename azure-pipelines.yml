@@ -67,8 +67,3 @@ stages:
               appName: $(webAppName)
               package: '$(Pipeline.Workspace)/drop/**/target/*.?(war|jar)'
               
-          - task: PublishBuildArtifacts@1
-            inputs:
-                  PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-                  ArtifactName: 'drop'
-                  publishLocation: 'Container'
